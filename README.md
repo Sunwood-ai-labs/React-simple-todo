@@ -122,3 +122,9 @@ Pegasusの詳細については、公式ドキュメントを参照してくだ�
 
 **注意:** Pegasusは開発中のプロジェクトであるため、APIや機能は変更される可能性があります。
 
+## 開発者用
+
+```
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+```
