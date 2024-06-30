@@ -128,3 +128,29 @@ Pegasusの詳細については、公式ドキュメントを参照してくだ�
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
 ```
+
+## 使用方法
+
+```
+
+docker-compose exec react-app /bin/bash
+
+npm create vite@latest my-react-app -- --template react
+
+cd my-react-app
+npm install
+npm run dev -- --host
+
+npm install -D tailwindcss postcss autoprefixer
+
+npx tailwindcss init
+npx shadcn-ui@latest init
+
+npx shadcn-ui@latest add button
+npx shadcn-ui@latest add input
+npx shadcn-ui@latest add checkbox
+
+npm run dev -- --host
+
+npm run deploy
+```

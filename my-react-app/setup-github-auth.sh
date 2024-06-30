@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# 環境変数が設定されていることを確認
 if [ -z "$GITHUB_USERNAME" ] || [ -z "$GITHUB_TOKEN" ] || [ -z "$GITHUB_EMAIL" ] || [ -z "$GITHUB_NAME" ]; then
   echo "エラー: 必要な環境変数が設定されていません。"
   echo "以下のコマンドを使用して環境変数を設定してください："
