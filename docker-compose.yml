@@ -1,0 +1,19 @@
+# docker-compose.yml
+version: '3.8'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+      - "5173:5173"
+    volumes:
+      - ./.git:/app/my-react-app/.git
+      - ./my-react-app:/app/my-react-app
+    environment:
+      - NODE_ENV=development
+    working_dir: /app/my-react-app
+    env_file:
+      - .env
+    tty: true
