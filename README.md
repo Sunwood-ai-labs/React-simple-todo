@@ -5,12 +5,7 @@
 <h2 align="center">
   ～ Parsing Extracting Generating Automated Scraping Utility System ～
 <br>
-  <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/React-simple-todo-SURF">
-<img alt="PyPI - Format" src="https://img.shields.io/pypi/format/React-simple-todo-SURF">
-<img alt="PyPI - Implementation" src="https://img.shields.io/pypi/implementation/React-simple-todo-SURF">
-<img alt="PyPI - Status" src="https://img.shields.io/pypi/status/React-simple-todo-SURF">
-<img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dd/React-simple-todo-SURF">
-<img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dw/React-simple-todo-SURF">
+
 <a href="https://github.com/Sunwood-ai-labs/React-simple-todo" title="Go to GitHub repo"><img src="https://img.shields.io/static/v1?label=React-simple-todo&message=Sunwood-ai-labs&color=blue&logo=github"></a>
 <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Sunwood-ai-labs/React-simple-todo">
 <a href="https://github.com/Sunwood-ai-labs/React-simple-todo"><img alt="forks - Sunwood-ai-labs" src="https://img.shields.io/github/forks/React-simple-todo/Sunwood-ai-labs?style=social"></a>
@@ -19,8 +14,17 @@
 <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Sunwood-ai-labs/React-simple-todo?color=red">
 <img alt="GitHub Tag" src="https://img.shields.io/github/v/tag/Sunwood-ai-labs/React-simple-todo?sort=semver&color=orange">
 <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Sunwood-ai-labs/React-simple-todo/publish-to-pypi.yml">
+
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/React-20232A?style=badge&logo=react&logoColor=61DAFB">
+  <img alt="Vite" src="https://img.shields.io/badge/Vite-B73BFE?style=badge&logo=vite&logoColor=FFD62E">
+  <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=badge&logo=tailwind-css&logoColor=white">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC?style=badge&logo=typescript&logoColor=white">
+</p>
+
 <br>
 <p align="center">
+  <a href="https://sunwood-ai-labs.github.io/React-simple-todo/"><b>[📚 GitHub Pages]</b></a> •
   <a href="https://hamaruki.com/"><b>[🌐 Website]</b></a> •
   <a href="https://github.com/Sunwood-ai-labs"><b>[🐱 GitHub]</b></a>
   <a href="https://x.com/hAru_mAki_ch"><b>[🐦 Twitter]</b></a> •
@@ -34,123 +38,169 @@
 >[!IMPORTANT]
 >このリポジトリのリリースノートやREADME、コミットメッセージの9割近くは[claude.ai](https://claude.ai/)や[ChatGPT4](https://chatgpt.com/)を活用した[AIRA](https://github.com/Sunwood-ai-labs/AIRA), [SourceSage](https://github.com/Sunwood-ai-labs/SourceSage), [Gaiah](https://github.com/Sunwood-ai-labs/Gaiah), [HarmonAI_II](https://github.com/Sunwood-ai-labs/HarmonAI_II)で生成しています。
 
-# Pegasus: あなたのウェブサイトをMarkdownに変換するツール
 
-## 🌟 はじめに
+React Simple Todo は、Vite、React、shadcn-ui を使用して構築されたシンプルで効率的なTODOリストアプリケーションです。
 
-Pegasusは、ウェブサイトを美しくフォーマットされたMarkdownドキュメントに再帰的にクロールおよび変換する、パワフルで柔軟なPythonパッケージです。指定されたURLから開始し、リンクをたどって関連するページを探索し、HTMLコンテンツを構造化されたMarkdownファイルに変換します。コマンドラインインターフェイス（CLI）から実行することも、Pythonスクリプトから直接使用することもできます。
+## 特徴
 
-このリポジトリには、Docker Composeを使用してPegasusを簡単に実行するための必要なファイルが含まれています。
+- 直感的なユーザーインターフェース
+- タスクの追加、完了、削除機能
+- レスポンシブデザイン
+- ダークモード対応
 
-## 🚀 使用開始
+## 技術スタック
 
-### 特徴
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
 
-- **再帰的なクロール:** Pegasusは、指定されたURLから開始し、リンクをたどってウェブサイト全体をクロールします。
-- **Markdownへの変換:** HTMLコンテンツを、読みやすく構造化されたMarkdownファイルに変換します。
-- **柔軟な設定:** クロールする深さ、無視するリンク、出力ファイルの名前などをカスタマイズできます。
-- **コマンドラインインターフェイス:** PegasusをCLIから簡単に実行できます。
-- **Python API:** PegasusをPythonスクリプトに統合して、より複雑なワークフローを実現できます。
+## セットアップ
+
+### 前提条件
+
+- Node.js (v14以上)
+- npm または yarn
+- Docker と Docker Compose (オプション)
 
 ### インストール
 
-1. このリポジトリをクローンします。
+1. リポジトリをクローンします：
+
+   ```bash
+   git clone https://github.com/Sunwood-ai-labs/React-simple-todo.git
+   cd React-simple-todo
+   ```
+
+2. 依存関係をインストールします：
+
+   ```bash
+   cd my-react-app
+   npm install
+   ```
+
+### 開発サーバーの起動
 
 ```bash
-git clone https://github.com/[あなたのユーザー名]/pegasus-docker-compose.git
+npm run dev
 ```
 
-2. ディレクトリに移動します。
+アプリケーションは `http://localhost:5173` で利用可能になります。
+
+## Docker を使用したセットアップ
+
+1. Docker と Docker Compose がインストールされていることを確認してください。
+
+2. リポジトリのルートディレクトリで以下のコマンドを実行します：
+
+   ```bash
+   docker-compose up -d
+   ```
+
+3. アプリケーションは `http://localhost:3000` で利用可能になります。
+
+## 開発者向け詳細手順
+
+プロジェクトを最初から設定する場合や、開発環境をセットアップする場合は、以下の手順に従ってください：
+
+1. Docker コンテナに入ります：
+
+   ```bash
+   docker-compose exec react-app /bin/bash
+   ```
+
+2. Vite を使用して新しい React プロジェクトを作成します：
+
+   ```bash
+   npm create vite@latest my-react-app -- --template react
+   ```
+
+3. プロジェクトディレクトリに移動し、依存関係をインストールします：
+
+   ```bash
+   cd my-react-app
+   npm install
+   ```
+
+4. 開発サーバーを起動します（ホストからアクセス可能にするために `--host` フラグを使用）：
+
+   ```bash
+   npm run dev -- --host
+   ```
+
+5. Tailwind CSS をインストールします：
+
+   ```bash
+   npm install -D tailwindcss postcss autoprefixer
+   ```
+
+6. Tailwind の設定ファイルを初期化します：
+
+   ```bash
+   npx tailwindcss init
+   ```
+
+7. shadcn/ui を初期化します：
+
+   ```bash
+   npx shadcn-ui@latest init
+   ```
+
+8. 必要な shadcn/ui コンポーネントを追加します：
+
+   ```bash
+   npx shadcn-ui@latest add button
+   npx shadcn-ui@latest add input
+   npx shadcn-ui@latest add checkbox
+   ```
+
+9. 開発サーバーを再起動します：
+
+   ```bash
+   npm run dev -- --host
+   ```
+
+10. デプロイする準備ができたら、以下のコマンドを実行します：
+
+    ```bash
+    npm run deploy
+    ```
+
+これらの手順に従うことで、プロジェクトを完全にセットアップし、開発を開始できます。
+
+## デプロイ
+
+GitHub Pages にデプロイするには：
 
 ```bash
-cd pegasus-docker-compose
-```
-
-3. Docker Composeを使用してコンテナを起動します。
-
-```bash
-docker-compose up -d
-```
-
-### 使用方法
-
-Pegasusコンテナが起動したら、次のコマンドを使用してWebサイトをクロールおよび変換できます。
-
-```bash
-docker-compose exec pegasus pegasus [オプション] <URL>
-```
-
-**例:**
-
-- `https://www.example.com` をクロールし、Markdownファイルを `output` ディレクトリに出力します。
-
-```bash
-docker-compose exec pegasus pegasus https://www.example.com -o output
-```
-
-- クロールの深さを3に制限します。
-
-```bash
-docker-compose exec pegasus pegasus https://www.example.com -d 3
-```
-
-- 特定のドメインからのリンクのみをクロールします。
-
-```bash
-docker-compose exec pegasus pegasus https://www.example.com -s example.com
-```
-
-## 📝 更新情報
-
-開発中のため、定期的に更新情報を確認してください。
-
-## 🤝 コントリビューション
-
-プロジェクトへの貢献を歓迎します。 詳細は、CONTRIBUTING.mdを参照してください。
-
-## 📄 ライセンス
-
-このプロジェクトは、[ライセンス名]ライセンスの下でライセンスされています。 詳細については、LICENSEファイルを参照してください。
-
-## 🙏 謝辞
-
-Pegasusの開発に貢献してくれたすべての人に感謝します。
-
-## 詳細情報
-
-Pegasusの詳細については、公式ドキュメントを参照してください：[https://pegasus-docs.com](https://pegasus-docs.com)
-
-**注意:** Pegasusは開発中のプロジェクトであるため、APIや機能は変更される可能性があります。
-
-## 開発者用
-
-```
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-```
-
-## 使用方法
-
-```
-
-docker-compose exec react-app /bin/bash
-
-npm create vite@latest my-react-app -- --template react
-
-cd my-react-app
-npm install
-npm run dev -- --host
-
-npm install -D tailwindcss postcss autoprefixer
-
-npx tailwindcss init
-npx shadcn-ui@latest init
-
-npx shadcn-ui@latest add button
-npx shadcn-ui@latest add input
-npx shadcn-ui@latest add checkbox
-
-npm run dev -- --host
-
 npm run deploy
 ```
+
+## 開発
+
+### コンポーネントの追加
+
+新しい shadcn/ui コンポーネントを追加するには：
+
+```bash
+npx shadcn-ui@latest add [component-name]
+```
+
+### スタイリング
+
+TailwindCSS を使用してスタイリングを行います。`app/globals.css` ファイルでグローバルスタイルを定義し、コンポーネント内で Tailwind クラスを使用してスタイリングします。
+
+## コントリビューション
+
+プロジェクトへの貢献を歓迎します。プルリクエストを送信する前に、既存の問題をチェックするか、新しい問題を作成してください。
+
+## ライセンス
+
+このプロジェクトは MIT ライセンスの下で公開されています。詳細については [LICENSE](LICENSE) ファイルを参照してください。
+
+## 謝辞
+
+- [Vite](https://vitejs.dev/) - 高速な開発環境
+- [React](https://reactjs.org/) - ユーザーインターフェース構築のための JavaScript ライブラリ
+- [shadcn/ui](https://ui.shadcn.com/) - 美しいUIコンポーネント
+- [Tailwind CSS](https://tailwindcss.com/) - ユーティリティファーストの CSS フレームワーク
